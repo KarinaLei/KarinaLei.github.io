@@ -305,9 +305,20 @@
 			}
 
 			.skills-column {
-				border: 8px solid white;
 				border-radius: 16px;
 				padding: 20px;
+			}
+
+			.skills-column.frontend {
+				border: 8px solid #96e0c5;
+			}
+
+			.skills-column.backend {
+				border: 8px solid #e3c996;
+			}
+
+			.skills-column.tools {
+				border: 8px solid #d59be8;
 			}
 
 			@media only screen and (max-width: 900px) {
@@ -357,6 +368,13 @@
 
 				#about-points {
 					text-align: center;
+					background: #e4eded;
+					border-radius: 6px;
+				}
+
+				#small-text {
+					font-size: 12px;
+					background: #e4eded;
 				}
 
 			#skills-title {
