@@ -251,6 +251,20 @@
 		margin: 10px;
 	}
 
+		.anchor {
+			display: block;
+			position: relative;
+			top: -40px;
+			visibility: hidden;
+		}
+
+		.anchor-welcome {
+			display: block;
+			position: relative;
+			top: -61px;
+			visibility: hidden;
+		}
+
 		.title {
 			background-color: transparent;
 			font-size: 32px;
