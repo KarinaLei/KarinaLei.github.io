@@ -32,11 +32,12 @@
 		text-decoration: none;
 		padding: 10px 20px;
 		text-align: center;
+		transition: all 0.3s ease;
+
 	}
 
 	.top-nav-bar > a:hover {
 		color: #2b80c2;
-		transition: all 0.3s ease;
 	}
 
 	#resume {
@@ -49,11 +50,12 @@
 		text-align: center;
 		cursor: pointer;
 		white-space: nowrap;
+		transition: all 0.3s ease;
+
 	}
 
 	#resume:hover {
 		background: #83beeb;
-		transition: all 0.3s ease;
 	}
 
 	.stickyTop {
@@ -81,8 +83,6 @@
 			flex-wrap: wrap;
 			position: relative;
 			padding-top: 60px;
-			/*width: 100%;*/
-			/*height: 100%;*/
 		}
 
 	.scroll {
@@ -273,19 +273,17 @@
 			border: 8px solid white;
 			border-radius: 16px;
 			padding: 5px;
+			background: white;
+			transition: all .3s ease;
 		}
 
 		.p-content:hover {
-			background-color: white;
-			transition: all .4s ease;
-		}
-
-		.p-content:hover p {
-			background-color: white;
-			transition: all .4s ease;
+			box-shadow: 0 0 20px #a4d4db;
+			
 		}
 
 		.p-content > p {
+			background: white;
 			margin: 10px;
 		}
 
@@ -306,20 +304,38 @@
 			}
 
 			.skills-column {
+				background: white;
 				border-radius: 16px;
 				padding: 20px;
+				transition: all .3s ease;
+			}
+
+			.skills-column p {
+				background: white;
 			}
 
 			.skills-column.frontend {
 				border: 8px solid #96e0c5;
 			}
 
+			.skills-column.frontend:hover {
+				box-shadow: 0 0 20px #86c4ad;
+			}
+
 			.skills-column.backend {
 				border: 8px solid #e3c996;
 			}
 
+			.skills-column.backend:hover {
+				box-shadow: 0 0 20px #b5a177;
+			}
+
 			.skills-column.tools {
 				border: 8px solid #d59be8;
+			}
+
+			.skills-column.tools:hover {
+				box-shadow: 0 0 20px #ab7dba;
 			}
 
 			@media only screen and (max-width: 900px) {
@@ -333,21 +349,15 @@
 				font-size: 20px;
 			}
 
-			.skills-column:hover {
-				background: white;
-			}
-
-			.skills-column:hover p {
-				background: white;
-			}
-
 			.skills-subtitle {
 				font-weight: bold;
 				font-size: 24px;
 				margin-bottom: 20px;
+				background: white;
 			}
 
 			.skills-item > p {
+				background: white;
 				font-size: 20px;
 				padding: 5px 0 5px 0;
 			}
