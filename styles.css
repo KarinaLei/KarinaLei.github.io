@@ -26,7 +26,7 @@ span {
 
 	.top-nav-bar {
 		max-width: none;
-		background: #e4eded;
+		background: #f2f7f6;
 		position: relative;
 		text-align: center;
 		z-index: 1;
@@ -34,7 +34,7 @@ span {
 
 	.top-nav-bar > a {
 		display: inline-block;
-		background-color: #e4eded;
+		background-color: #f2f7f6;
 		color: #292b2b;		
 		font-size: 20px;
 		text-decoration: none;
@@ -49,7 +49,7 @@ span {
 	}
 
 	#resume {
-		background: #aed6f5;
+		background: #cde6fa;
 		color: #174569;
 		font-size: 20px;
 		border: none;
@@ -63,7 +63,7 @@ span {
 	}
 
 	#resume:hover {
-		background: #83beeb;
+		background: #aed6f5;
 	}
 
 	.stickyTop {
