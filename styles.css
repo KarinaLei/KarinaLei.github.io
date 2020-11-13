@@ -450,32 +450,42 @@ span {
 				position: relative;
 			}
 
-			.proj-card > p,
-			.proj-card > h1,
-			.proj-card > h3 {
+			.proj-desc > p,
+			.proj-desc > h1,
+			.proj-desc > h3 {
 				background: white;
 				padding: 5px;
 			}
 
-			.proj-card > p {
-				padding-top: 25px;
+			.proj-desc > p {
+				transition: all .3s ease;
 				line-height: 30px;
+				border-radius: 8px;
 			}
 
-			.proj-card > h1 {
+			.proj-desc > h1 {
 				font-size: 30px;
 			}
 
-			.proj-card > h3 {
+			.emoji {
+				font-size: 30px;
+			}
+
+			#exhaust {
+				opacity: 0;
+			}
+
+			.proj-desc > h3 {
 				font-size: 20px;
 				font-style: italic;
+				padding-bottom: 30px;
 			}
 
 			.proj-card#avsim {
 				border-top: 30px solid #f772ee;
 			}
 
-			.proj-card#avsim > h3 {
+			.proj-card#avsim .proj-desc > h3 {
 				color: #8f828f;
 			}
 
@@ -483,11 +493,33 @@ span {
 				box-shadow: 10px 10px 0 #dfade0;
 			}
 
+			.proj-card#avsim:hover p {
+				background: #f9f5fa;
+			}
+
+			.proj-card#avsim:hover #exhaust {
+				position: relative;
+				animation: 
+					disappear 1.5s infinite,
+					move-away 1.5s infinite;
+			}
+
+			@keyframes move-away {
+				0% {left: 0}
+				80% {left: 50px;}
+				100% {left: 50px;}
+			}
+
+			@keyframes disappear {
+				from {opacity: 70%}
+				to {opacity: 0}
+			}
+
 			.proj-card#algo {
 				border-top: 30px solid #6ab9e6;
 			}
 
-			.proj-card#algo > h3 {
+			.proj-card#algo .proj-desc > h3 {
 				color: #788e9c;
 			}
 
@@ -495,11 +527,32 @@ span {
 				box-shadow: 10px 10px 0 #b1d4e6;
 			}
 
+			.proj-card#algo:hover #coffee {
+				position: relative;
+				animation: shake 2.5s infinite;
+			}
+
+			.proj-card#algo:hover #shiny {
+				animation: shiny 1.25s infinite;
+			}
+
+			@keyframes shake {
+				from, to {top: 0; left: 0;}
+				25% {top: -5px; left: -5px;}
+				50% {top:0; left: 0;}
+				75% {top: -5px; right: 5px;}
+			}
+
+			@keyframes shiny {
+				from, to {opacity: 100%}
+				50% {opacity: 0}
+			}
+
 			.proj-card#covid {
 				border-top: 30px solid #6ae6ac;
 			}
 
-			.proj-card#covid > h3 {
+			.proj-card#covid .proj-desc > h3 {
 				color: #789c8f;
 			}
 
@@ -507,39 +560,68 @@ span {
 				box-shadow: 10px 10px 0 #ade0cc;
 			}
 
-			.proj-links {
-				color: black;
-				font-size: 20px;
-				padding: 10px;
-				text-decoration: none;
-				border-radius: 5px;
+			.proj-card#covid:hover #alarm {
+				animation: blinky 1.25s infinite;
+			}
+
+			.proj-card#covid:hover #compass {
 				display: inline-block;
+				animation: spin 2.5s infinite;
+			}
+
+			@keyframes blinky {
+				from, to {box-shadow: none; background: transparent;}
+				50% {box-shadow: 0 0 30px #f54e4e; background: #ffc7c7;}
+			}
+
+			@keyframes spin {
+				0% {transform: rotate(0deg);}
+				50% {transform: rotate(30deg);}
+				100% {transform: rotate(0deg);}
+			}
+
+			.proj-tools {
+				padding: 10px;
+				margin-top: 15px;
+				background: white;
+			}
+
+			.proj-tool {
+				font-family: Inconsolata, sans-serif;
+				padding-right: 20px;
 				white-space: nowrap;
-				margin-right: 10px;
-				margin-top: 10px;
-				/*position: absolute;*/
 			}
 
-			/*.proj-links#source {
-				top: 0;
-				right: -40px;
+			.proj-tool:before {
+				content: "🚗";
 			}
 
-			.proj-links#demo {
-				top: 60px;
-				right: -40px;
-			}*/
-
-			#avsim .proj-links {
-				background: #faf2fa;
+			.proj-tool:hover {
+				position: relative;
+				top: -5px;
 			}
 
-			.links-logo {
+			.proj-links {
+				background: white;
+			}
+
+			.proj-link {
+				background: white;
+				padding-left: 10px;
+				padding-top: 10px;
+				text-decoration: none;
+				display: inline-block;
+			}
+
+			svg {
+				background: transparent;
 				height: 20px;
 				width: auto;
-				margin-left: 8px;
-				padding-top: 5px;
-				background: transparent;
+				transition: all 0.3s ease;
+			}
+
+			#avsim svg:hover {
+				fill: #8f828f;
 			}
 
 		.icon {
