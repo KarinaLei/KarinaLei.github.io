@@ -81,7 +81,7 @@ span {
 	}
 
 	.content {
-		max-width: 1200px;
+		max-width: 1250px;
 		margin: 0 auto;
 	}
 
@@ -305,6 +305,10 @@ span {
 			box-shadow: 10px 10px 0 #a4d4db;
 		}
 
+		.p-content:hover #about-points{
+			background: #e4eded;
+		}
+
 		.p-content > p {
 			background: white;
 			margin: 10px;
@@ -379,27 +383,27 @@ span {
 				background: white;
 			}
 
-			.skills-column.frontend {
+			.skills-column.backend {
 				border: 8px solid #96e0c5;
 			}
 
-			.skills-column.frontend:hover {
+			.skills-column.backend:hover {
 				box-shadow: 10px 10px 0 #86c4ad;
 			}
 
-			.skills-column.backend {
+			.skills-column.tools {
 				border: 8px solid #e3c996;
 			}
 
-			.skills-column.backend:hover {
+			.skills-column.tools:hover {
 				box-shadow: 10px 10px 0 #b5a177;
 			}
 
-			.skills-column.tools {
+			.skills-column.frontend {
 				border: 8px solid #d59be8;
 			}
 
-			.skills-column.tools:hover {
+			.skills-column.frontend:hover {
 				box-shadow: 10px 10px 0 #ab7dba;
 			}
 
@@ -421,14 +425,113 @@ span {
 				font-family: Inconsolata, sans-serif;
 				background: white;
 				padding: 5px 0 5px 0;
+				text-align: center;
 			}
 
+
+		#exp {
+
+		}	
+
+			.exp-card {
+				background: white;
+				border-radius: 8px;
+				padding: 20px;
+				transition: all .3s ease;
+				margin: 20px;
+				width: 100%;
+				position: relative;
+			}
+
+			.exp-card#bccrc {
+				border-left: 30px solid #e3c996;
+			}
+
+			.exp-desc {
+				background: white;
+			}
+
+			.exp-desc > ul {
+				background: white;
+				list-style-type: none;
+				padding-top: 8px;
+				padding-bottom: 10px;
+			}
+
+			.exp-desc > p,
+			.exp-desc > h1,
+			.exp-desc > h3 {
+				background: white;
+				padding: 5px;
+			}
+
+			.exp-desc > ul > li {
+				background: white;
+				padding: 5px;
+				font-size: 18px;
+				text-align: center;
+				line-height: 20px;
+				font-family: Roboto, sans-serif;
+				font-weight: 300;
+			}
+
+			.exp-desc > p, ul, li {
+				transition: all .3s ease;
+				line-height: 30px;
+			}			
+
+			.exp-desc > h1 {
+				font-size: 30px;
+			}
+
+			.exp-desc > h3 > span {
+				font-size: 20px;
+				font-style: italic;
+				font-weight: bold;
+				font-family: Inconsolata, sans-serif;
+			}
+
+			.exp-desc > h3 {
+				padding-bottom: 30px;
+			}
+
+			.exp-desc > h3 #company {
+				text-align: left;
+			}
+
+			.exp-desc > h3 #duration {
+				float: right;
+				margin-right: 20px;
+			}
+
+			#bccrc .exp-desc > h3 #company {
+				color: #ad8432;
+			}
+			#bccrc .exp-desc > h3 #duration {
+				color: #dba840;
+			}
+
+			.exp-card#bccrc:hover {
+				box-shadow: 10px 10px 0 #b5a177;
+			}
+
+			.exp-card#bccrc:hover ul {
+				border-radius: 8px;
+				background: #faf6ed;
+			}
+			.exp-card#bccrc:hover ul > li {
+				background: #faf6ed;
+			}
+
+			.exp-card#bccrc:hover #shiny {
+				animation: shiny 1.25s infinite;
+			}
 
 		#projects {
 
 		}
 
-			.proj-block {
+			.proj-block, .exp-block {
 				margin-top: 61px;
 				max-width: 900px;
 				margin-left: 50px;
@@ -448,6 +551,10 @@ span {
 				margin: 20px;
 				width: 100%;
 				position: relative;
+			}
+
+			.proj-desc {
+				background: white;
 			}
 
 			.proj-desc > p,
@@ -641,13 +748,14 @@ span {
 
 				#about-points {
 					text-align: center;
-					background: #e4eded;
 					border-radius: 6px;
+					transition: all 0.3s ease;
+					padding-top: 8px;
+					padding-bottom: 8px;
 				}
 
 				#small-text {
 					font-size: 12px;
-					background: #e4eded;
 				}
 
 			#skills-title {
