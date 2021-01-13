@@ -379,8 +379,13 @@ span {
 				transition: all .3s ease;
 			}
 
+			.inline-emoji {
+				font-size: 28px;
+			}
+
 			.skills-column p {
 				background: white;
+				transition: all .3s ease;
 			}
 
 			.skills-column.backend {
@@ -389,6 +394,30 @@ span {
 
 			.skills-column.backend:hover {
 				box-shadow: 10px 10px 0 #86c4ad;
+				background-color: #edfff9;
+			}
+			.skills-column.backend:hover p {
+				background-color: #edfff9;
+			}
+			.skills-column.backend:hover #inbox {
+				position: relative;
+				animation: sink 2.5s infinite;
+			}
+			.skills-column.backend:hover #outbox {
+				position: relative;
+				animation: jump 2.5s infinite;
+			}
+
+			@keyframes sink {
+				0% {top: 0px;}
+				50% {top: 10px;}
+				100% {top: 0px;}
+			}
+
+			@keyframes jump {
+				0% {top: 0px;}
+				50% {top: -10px;}
+				100% {top: 0px;}
 			}
 
 			.skills-column.tools {
@@ -397,6 +426,24 @@ span {
 
 			.skills-column.tools:hover {
 				box-shadow: 10px 10px 0 #b5a177;
+				background-color: #fff4de;
+			}
+			.skills-column.tools:hover p {
+				background-color: #fff4de;
+			}
+			.skills-column.tools:hover #Ltool {
+				display: inline-block;
+				animation: spinL 2.25s infinite;
+			}
+			.skills-column.tools:hover #Rtool {
+				display: inline-block;
+				animation: spinR 2.25s infinite;
+			}
+
+			@keyframes spinL {
+				0% {transform: rotate(0deg);}
+				50% {transform: rotate(-30deg);}
+				100% {transform: rotate(0deg);}
 			}
 
 			.skills-column.frontend {
@@ -405,6 +452,20 @@ span {
 
 			.skills-column.frontend:hover {
 				box-shadow: 10px 10px 0 #ab7dba;
+				background-color: #f9f5fa;
+			}
+			.skills-column.frontend:hover p {
+				background-color: #f9f5fa;
+			}
+			.skills-column.frontend:hover #flower {
+				display: inline-block;
+				animation: orbit 3s infinite;
+				animation-timing-function: linear;
+			}
+
+			@keyframes orbit {
+				0% {transform: rotate(0deg);}
+				100% {transform: rotate(360deg);}
 			}
 
 			@media only screen and (max-width: 900px) {
@@ -673,7 +734,7 @@ span {
 
 			.proj-card#covid:hover #compass {
 				display: inline-block;
-				animation: spin 2.5s infinite;
+				animation: spinR 2.5s infinite;
 			}
 
 			@keyframes blinky {
@@ -681,7 +742,7 @@ span {
 				50% {box-shadow: 0 0 30px #f54e4e; background: #ffc7c7;}
 			}
 
-			@keyframes spin {
+			@keyframes spinR {
 				0% {transform: rotate(0deg);}
 				50% {transform: rotate(30deg);}
 				100% {transform: rotate(0deg);}
