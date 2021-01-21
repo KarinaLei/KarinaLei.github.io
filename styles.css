@@ -649,6 +649,43 @@ span {
 				padding-bottom: 30px;
 			}
 
+			.proj-card#movie-engine {
+				border-top: 30px solid#9e72f7;
+			}
+
+			.proj-card#movie-engine .proj-desc > h3 {
+				color:#685e7a;
+			}
+
+			.proj-card#movie-engine:hover {
+				box-shadow: 10px 10px 0#bdade0;
+			}
+
+			.proj-card#movie-engine:hover p {
+				background: #f4f2fc;
+			}
+
+			.proj-card#movie-engine:hover .emoji#movie {
+				position: relative;
+				animation: 
+					shiny .5s infinite;
+			}
+
+			#movie svg:hover {
+				fill: #685e7a;
+			}
+
+			.fa.fa-external-link {
+				font-size: 20px; 
+				background-color: transparent; 
+				color: black;
+				transition: all 0.3s ease;
+			}
+
+			.fa.fa-external-link:hover {
+				color: #685e7a;
+			}
+
 			.proj-card#avsim {
 				border-top: 30px solid #f772ee;
 			}
@@ -760,21 +797,29 @@ span {
 				white-space: nowrap;
 			}
 
-			.proj-tool:before {
-				content: "🚗";
+			.proj-tool#movie:before {
+				content: "🏆";
 			}
 
-			.proj-tool:hover {
+			.proj-tool#avsim:before {
+				content: "🏎";
+			}
+
+			.proj-tool#avsim:hover {
+				font-style: italic;
+			}
+
+			.proj-tool#movie:hover {
 				position: relative;
 				top: -5px;
 			}
 
 			.proj-links {
-				background: white;
+				background: transparent;
 			}
 
 			.proj-link {
-				background: white;
+				background: transparent;
 				padding-left: 10px;
 				padding-top: 10px;
 				text-decoration: none;
